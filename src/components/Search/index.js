@@ -1,12 +1,25 @@
-import React from "react";
+import React from 'react';
 
-export default function Search() {
+export default function Search(props) {
   return (
     <div className="search-container">
-      <input className="search" placeholder="Search..." type="text" />
+      <input
+        id="searchTerm"
+        className="search"
+        placeholder="Search..."
+        type="text"
+        value={props.searchTerm}
+        onChange={props.onChange}
+      />
       <div>
-        <input id="check" type="checkbox" />
-        <label htmlFor="check">only show products in stock</label>
+        <input
+          id="stockedCheck"
+          type="checkbox"
+          checked={props.stockedCheck}
+          onChange={props.onChange}
+        />
+
+        <label htmlFor="stockedCheck">only show products in stock</label>
       </div>
     </div>
   );

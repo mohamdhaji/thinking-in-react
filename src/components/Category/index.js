@@ -1,9 +1,10 @@
-import React from "react";
-import Item from "../utils/item";
+import React from 'react';
+import Item from '../utils/item';
 export default function Category({ category, data }) {
   return (
-    <div style={{ marginTop: "5px" }}>
+    <div style={{ marginTop: '5px' }}>
       <div className="category-title">{category}</div>
+
       {data.map((item, i) => {
         return (
           <Item
